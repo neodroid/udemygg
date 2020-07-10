@@ -15,11 +15,11 @@ async function getSortedPostsData() {
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "cross-site",
       },
-      referrer: "https://www.teachinguide.com/udemy-coupon-codes/",
-      referrerPolicy: "no-referrer-when-downgrade",
+      // referrer: "https://www.teachinguide.com/udemy-coupon-codes/",
+      // referrerPolicy: "no-referrer-when-downgrade",
       body: null,
       method: "GET",
-      mode: "cors",
+      // mode: "cors",
     }
   );
   return res.json();
@@ -51,11 +51,11 @@ export default async (req, res) => {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "cross-site",
           },
-          referrer: "https://www.teachinguide.com/udemy-coupon-codes/",
-          referrerPolicy: "no-referrer-when-downgrade",
+          // referrer: "https://www.teachinguide.com/udemy-coupon-codes/",
+          // referrerPolicy: "no-referrer-when-downgrade",
           body: null,
           method: "GET",
-          mode: "cors",
+          // mode: "cors",
         }
       );
       return res.json();

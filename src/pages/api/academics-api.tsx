@@ -1,5 +1,7 @@
 import fetch from "node-fetch";
 
+//var linknya = "https://www.teachinguide.com/udemy-coupon-codes/";
+
 async function getSortedPostsData() {
   // Instead of the file system,
   // fetch post data from an external API endpoint
@@ -12,11 +14,11 @@ async function getSortedPostsData() {
       "sec-fetch-mode": "cors",
       "sec-fetch-site": "cross-site"
     },
-    "referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
-    "referrerPolicy": "no-referrer-when-downgrade",
+    //"referrer": linknya,
+    //"referrerPolicy": "no-referrer-when-downgrade",
     "body": null,
     "method": "GET",
-    "mode": "cors"
+    //"mode": "cors"
   });
   return res.json();
   // console.log('succes');
@@ -44,11 +46,11 @@ export default async (req, res) => {
           "sec-fetch-mode": "cors",
           "sec-fetch-site": "cross-site"
         },
-        "referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
-        "referrerPolicy": "no-referrer-when-downgrade",
+        // "referrer": "https://www.teachinguide.com/udemy-coupon-codes/",
+        // "referrerPolicy": "no-referrer-when-downgrade",
         "body": null,
         "method": "GET",
-        "mode": "cors"
+        // "mode": "cors"
       });
       return res.json();
       // console.log('succes');
