@@ -57,7 +57,7 @@ export const CourseCard = (props) => {
           
         </Box>
         <Button width="100%" variant="solid" variantColor="green" >
-        BUY
+        Beli
       </Button>
       </Box>
       

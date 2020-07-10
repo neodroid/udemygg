@@ -23,7 +23,7 @@ import { Pagination } from "../components/pagination";
 
  
 var base;
-class App extends Component {
+class App extends React.Component<{},any>{
   constructor(props) {
     super(props);
  
