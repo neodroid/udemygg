@@ -20,6 +20,7 @@ import { Footer } from "../components/Footer";
 import { Pagination } from "../components/pagination";
 
 import Loader from 'react-loader-spinner';
+import Head from 'next/head'
 
 
 
@@ -53,6 +54,9 @@ class App extends React.Component<{},any>{
  
     return (
         <Container>
+          <Head>
+        <title>Udemy Murah</title>
+      </Head>
             <Hero title="Business"/>
             <Main>
             <Container

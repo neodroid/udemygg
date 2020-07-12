@@ -20,13 +20,17 @@ import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import React from 'react';
 import { MenuCard } from "../components/MenuCard";
+import Head from 'next/head'
 
 
 
 
 const Index = () => (
   <Container>
-    <Hero title="UdemyMurah.id"/>
+    <Head>
+        <title>UdemyMurah</title>
+      </Head>
+    <SmallHero />
     <Main justifyContent="center" alignItems="center" >
     <Box
           color="#4A5568"
@@ -46,7 +50,13 @@ const Index = () => (
         flex="1"
         justifyContent="center" 
         py={2}>
-          
+          <MenuCard 
+            img={"https://img-a.udemycdn.com/course/480x270/629302_8a2d_2.jpg"}
+            title={"IT & SOFTWARE"}
+            price={"Programming Language | Network & Security | Operating Systems | IT Certification | Other"}
+            link={"/software-page"}
+
+          />
           <MenuCard 
             img={"https://img-a.udemycdn.com/course/480x270/1565838_e54e_11.jpg"}
             title={"DEVELOPMENT"}
@@ -55,13 +65,7 @@ const Index = () => (
             
 
           />
-          <MenuCard 
-            img={"https://img-a.udemycdn.com/course/480x270/629302_8a2d_2.jpg"}
-            title={"IT & SOFTWARE"}
-            price={"Programming Language | Network & Security | Operating Systems | IT Certification | Other"}
-            link={"/software-page"}
-
-          />
+          
           <MenuCard 
             img={"https://img-a.udemycdn.com/course/480x270/1643044_e281.jpg"}
             title={"DESIGN"}

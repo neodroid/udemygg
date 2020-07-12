@@ -21,6 +21,7 @@ import { Pagination } from "../components/pagination";
 import { usePromiseTracker } from "react-promise-tracker";
 
 import Loader from 'react-loader-spinner';
+import Head from 'next/head'
 
 
 
@@ -57,6 +58,9 @@ class App extends React.Component<{},any>{
  
     return (
         <Container>
+          <Head>
+        <title>Udemy Murah</title>
+      </Head>
             <Hero title="Academics"/>
             <Main>
             <Container

@@ -18,6 +18,7 @@ import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import Loader from 'react-loader-spinner';
+import Head from 'next/head'
 
 
 
@@ -54,6 +55,9 @@ class App extends React.Component<{},any>{
  
     return (
         <Container>
+          <Head>
+        <title>Udemy Murah</title>
+      </Head>
             <Hero title="IT & Software"/>
             <Main>
             <Container
