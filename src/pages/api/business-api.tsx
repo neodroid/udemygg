@@ -57,6 +57,22 @@ export default async (req, res) => {
     const data0 = await getSortedPostsData0();
     const results0 = (data0.results);
     dataTotal = dataTotal.concat(results0);
+    var key = "CouponLink"
+    var key1 = "CouponCode"
+    var key2 = "CouponId"
+
+    dataTotal.map(
+      state => 
+      delete state[key]
+    );
+    dataTotal.map(
+      state => 
+      delete state[key1]
+    );
+    dataTotal.map(
+      state => 
+      delete state[key2]
+    );
   
 
   

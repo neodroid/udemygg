@@ -26,9 +26,10 @@ import Head from 'next/head'
 
 
 const Index = () => (
+  
   <Container>
     <Head>
-        <title>UdemyMurah</title>
+        <title>Udemy Murah</title>
       </Head>
     <SmallHero />
     <Main justifyContent="center" alignItems="center" >
@@ -112,7 +113,7 @@ const Index = () => (
     </Footer>
     <CTA />
   </Container>
-  
+ 
 );
 
 export default Index;

@@ -59,6 +59,7 @@ class App extends React.Component<{},any>{
     return (
         <Container>
           <Head>
+          
         <title>Udemy Murah</title>
       </Head>
             <Hero title="Academics"/>
