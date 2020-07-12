@@ -17,7 +17,7 @@ import { Main } from "../components/Main";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
-import { Pagination } from "../components/pagination";
+import Loader from 'react-loader-spinner';
 
 
 
@@ -29,16 +29,20 @@ class App extends React.Component<{},any>{
  
     this.state = {
         results: [],
+        isLoading: true,
        
     };
     
     
   }
  
+  
+  
   componentDidMount() {
     fetch("/api/software-api")
       .then(response => response.json())
-      .then(base => this.setState({ results: base.dataTotal }));
+      .then(base => this.setState({ results: base.dataTotal ,isLoading: false }));
+      
      
       //console.log(data.pages);
       
@@ -61,14 +65,25 @@ class App extends React.Component<{},any>{
         justifyContent="center" 
         py={2}
       >
-        {/* <CourseCard img={data.results[0].ImageUrl}/>
-        <CourseCard /> */}
-         {results.map(hit =>
+        {this.state.isLoading ? 
+        <div
+             style={{
+                width: "100%",
+                height: "100",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <Loader type="ThreeDots" color="#2BAD60" height="100" width="100" />
+            </div> : 
+         results.map(hit =>
           <CourseCard 
             img={hit.ImageUrl}
             title={hit.Title}
             price={hit.PriceOld}
             review={hit.Reviews}
+            star={hit.Rating}
 
           />
         )}
@@ -78,7 +93,7 @@ class App extends React.Component<{},any>{
             </Main>
              
       <Footer>
-      <Text>BLM ❤️ KELAR</Text>
+      <Text> © 2020 LesMurah.com | Neodroid</Text>
     </Footer>
    
         </Container>
