@@ -23,12 +23,7 @@ export const CourseCard = (props) => {
       <img src={property.imageUrl} alt={property.imageAlt} />
 
       <Box p="6">
-        <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" variantColor="teal">
-            Rp.25.000- hanya di @UdemyMurah.id
-          </Badge>
-          
-        </Box>
+        
 
         <Box
           mt="1"
@@ -38,6 +33,12 @@ export const CourseCard = (props) => {
          // isTruncated
         >
           {property.title}
+        </Box>
+        <Box d="flex" alignItems="baseline">
+          <Badge rounded="full" px="2" variantColor="teal">
+            Rp.25.000- hanya di @UdemyMurah.id
+          </Badge>
+          
         </Box>
 
         
