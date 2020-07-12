@@ -36,7 +36,7 @@ export const CourseCard = (props) => {
         </Box>
         <Box d="flex" alignItems="baseline">
           <Badge rounded="full" px="2" variantColor="teal">
-            Rp.25.000- hanya di @UdemyMurah.id
+            Rp.25.000- hanya di @UdemyMurah
           </Badge>
           
         </Box>
