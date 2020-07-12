@@ -1,5 +1,5 @@
 
-import { Link as ChakraLink, Button,Flex, useColorMode, Box, Icon} from '@chakra-ui/core'
+import { Link as ChakraLink, Button,Flex, useColorMode, Box, Icon, Alert,AlertIcon} from '@chakra-ui/core'
 import { Badge } from "reactstrap";
 
 
@@ -10,7 +10,7 @@ export const CourseCard = (props) => {
     imageUrl: props.img,
     imageAlt: props.imgAlt,
     bintang: props.star,
-    baths: 2,
+    tenggat: props.time,
     title: props.title,
     formattedPrice: props.price,
     reviewCount: props.review,
@@ -18,8 +18,82 @@ export const CourseCard = (props) => {
 
   };
 
+  
+  const timeNow = new Date();
+  const deadline = new Date(property.tenggat);
+  const jam = timeNow.getUTCHours(); 
+  const tenggathari = deadline.getDate()- timeNow.getUTCDate();
+  const tenggatjam = deadline.getHours()-jam ;
+  const tenggatmenit =  deadline.getMinutes()-timeNow.getUTCMinutes();
+  var deadhari = false;
+  var deadjam=false;
+  var deadmenit=false;
+  console.log(tenggathari);
+
+  var sisajam=tenggatjam;
+  var sisahari=tenggathari;
+  var sisamenit=tenggatmenit;
+
+  if(tenggathari==0){
+   // sisajam = 24 - tenggatjam;
+    
+  }
+  
+  if(tenggatjam==1){
+    sisamenit = 60+deadline.getMinutes() - timeNow.getUTCMinutes();
+    sisajam =0;
+  }
+  if(tenggathari==1){
+    sisajam = 24+deadline.getHours() - timeNow.getUTCHours();
+    sisahari =0;
+  }
+
+  if(sisahari<=1){
+    deadhari=true;
+    if(sisajam<=12){
+      deadjam=true;
+      if(sisajam<=1){
+        deadmenit=true;
+      }
+    }
+  }
+
+  var sisa = "sisa "+sisahari+" hari "+sisajam+" jam "+sisamenit+" menit";
+  
+  var captionjam = "Promo berakhir dalam "+sisajam+" Jam";
+  
+  var captionhari = "Promo berakhir dalam "+sisahari+" hari";
+  
+  var captionmenit = "Promo berakhir dalam "+sisamenit+" menit";
+
+  
+
+  
+{/* <Alert status="error">
+    <AlertIcon />
+    Promo Sisa 4 Jam
+    </Alert> */}
+  
+
+
   return (
     <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} >
+
+{deadmenit ? 
+  <Alert status="error">
+        <AlertIcon />
+        {captionmenit}
+        </Alert>
+         : 
+         deadjam ?
+         <Alert status="error">
+        <AlertIcon />
+        {captionjam}
+        </Alert> :
+       <Box/>
+        }
+    
+
       <img src={property.imageUrl} alt={property.imageAlt} />
 
       <Box p="6">

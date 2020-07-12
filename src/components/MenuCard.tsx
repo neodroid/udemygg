@@ -1,5 +1,5 @@
 
-import { Link as ChakraLink, Button,Flex, useColorMode, Box, Icon, Link} from '@chakra-ui/core'
+import { Link as ChakraLink, Button,Flex, useColorMode, Box, Icon, Link, Alert,AlertIcon} from '@chakra-ui/core'
 import { Badge } from "reactstrap";
 
 
@@ -19,18 +19,23 @@ export const MenuCard = (props) => {
 
   };
 
+  const birthday = new Date();
+  const date1 = birthday.getDate();
+
+
   return (
     <Link
     
     href={property.link}
      
   >
+    
     <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" m={2} backgroundColor="#F7FAFC" borderColor="A0AEC0" >
       <img src={property.imageUrl} alt={property.imageAlt}  />
-
+     
       <Box p="6" >
-        
-
+      
+     
         <Box 
           mt="1"
           fontWeight="semibold"
