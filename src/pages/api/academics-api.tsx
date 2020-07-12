@@ -24,6 +24,7 @@ async function getSortedPostsData() {
   // console.log('succes');
 }
 
+
 export default async (req, res) => {
   var dataTotal=[],i;
   const data = await getSortedPostsData();
@@ -31,13 +32,13 @@ export default async (req, res) => {
  const results = (data.results);
   //res.status(200).json({ data});
   //console.log(data.pages);
-  for(i=1;i<=data.pages;i++){
+  
 
     
     async function getSortedPostsData0() {
       // Instead of the file system,
       // fetch post data from an external API endpoint
-      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=12&page="+i+"&inkw=&discount=100&language=English&cat=Office%20Productivity%7CTeaching%20%26%20Academics", {
+      const res = await fetch("https://teachinguide.azure-api.net/course-coupon?sortCol=students&sortDir=DESC&length=50&inkw=&discount=100&language=English&cat=Office%20Productivity%7CTeaching%20%26%20Academics", {
         "headers": {
           "accept": "application/json, text/plain, */*",
           "accept-language": "en-US,en;q=0.9,id;q=0.8",
@@ -59,7 +60,7 @@ export default async (req, res) => {
     const data0 = await getSortedPostsData0();
     const results0 = (data0.results);
     dataTotal = dataTotal.concat(results0);
-  }
+  
 
   
   

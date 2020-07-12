@@ -71,13 +71,7 @@ const Index = () => (
             <a>marketing</a>
           </Link>
         </ListItem>
-        <ListItem>
-          <ListIcon icon="check-circle" color="green.500" />
-          <Link href="/office-page" 
-          >
-            <a>office</a>
-          </Link>
-        </ListItem>
+        
         <ListItem>
           <ListIcon icon="check-circle" color="green.500" />
           <Link href="/academics-page" 
