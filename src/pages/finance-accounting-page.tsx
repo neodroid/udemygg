@@ -87,6 +87,7 @@ class App extends React.Component<{},any>{
             review={hit.Reviews}
             star={hit.Rating}
             time={hit.EndTime}
+            linkUdemy={hit.Link}
 
           />
         )}

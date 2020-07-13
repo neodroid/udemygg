@@ -15,6 +15,7 @@ export const CourseCard = (props) => {
     formattedPrice: props.price,
     reviewCount: props.review,
     rating: 4,
+    linkUdemy: props.linkUdemy,
 
   };
 
@@ -136,6 +137,7 @@ export const CourseCard = (props) => {
           
           
         </Box>
+        <Box     mt="1">
         <ChakraLink
       isExternal
       href="https://wa.me/6281395098451?text=Halo%20min!%20Saya%20tertarik%20dengan%20Course%20Udemy%20yang%20dijual"
@@ -146,6 +148,16 @@ export const CourseCard = (props) => {
         Beli
       </Button>
     </ChakraLink>
+
+        </Box>
+        <Box     mt="1">
+        <ChakraLink isExternal href={property.linkUdemy} flexGrow={1} mx={2}>
+      <Button width="100%" variant="outline" variantColor="green">
+        Check Udemy
+      </Button>
+    </ChakraLink>
+        </Box>
+    
       </Box>
       
     </Box>
