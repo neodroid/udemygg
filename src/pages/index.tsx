@@ -28,9 +28,7 @@ import Head from 'next/head'
 const Index = () => (
   
   <Container>
-    <Head>
-        <title>Udemy Murah</title>
-      </Head>
+    
     <SmallHero />
     <Main justifyContent="center" alignItems="center" >
     <Box

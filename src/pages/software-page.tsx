@@ -56,7 +56,8 @@ class App extends React.Component<{},any>{
     return (
         <Container>
           <Head>
-        <title>Udemy Murah</title>
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+        
       </Head>
             <Hero title="IT & Software"/>
             <Main>
