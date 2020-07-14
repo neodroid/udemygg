@@ -55,10 +55,7 @@ class App extends React.Component<{},any>{
  
     return (
         <Container>
-          <Head>
-          <link rel="shortcut icon" href="/static/favicon.ico" />
-        
-      </Head>
+          
             <Hero title="IT & Software"/>
             <Main>
             <Container
@@ -100,7 +97,7 @@ class App extends React.Component<{},any>{
             </Main>
              
       <Footer>
-      <Text> © 2020 LesMurah.com | Neodroid</Text>
+      <Text> © 2020 LesMurah.com by neodroid 🔥</Text>
     </Footer>
    
         </Container>

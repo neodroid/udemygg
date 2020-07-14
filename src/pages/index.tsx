@@ -28,6 +28,7 @@ import Head from 'next/head'
 const Index = () => (
   
   <Container>
+     
     
     <SmallHero />
     <Main justifyContent="center" alignItems="center" >
@@ -107,7 +108,7 @@ const Index = () => (
 
     
     <Footer>
-      <Text> © 2020 LesMurah.com | Neodroid</Text>
+    <Text> © 2020 LesMurah.com by neodroid 🔥</Text>
     </Footer>
     <CTA />
   </Container>

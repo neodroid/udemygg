@@ -54,9 +54,7 @@ class App extends React.Component<{},any>{
  
     return (
         <Container>
-          <Head>
-        <title>Udemy Murah</title>
-      </Head>
+          
             <Hero title="Business"/>
             <Main>
             <Container
@@ -98,7 +96,7 @@ class App extends React.Component<{},any>{
             </Main>
              
       <Footer>
-      <Text> © 2020 LesMurah.com | Neodroid</Text>
+      <Text> © 2020 LesMurah.com by neodroid 🔥</Text>
     </Footer>
    
         </Container>
