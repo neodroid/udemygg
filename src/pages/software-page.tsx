@@ -97,7 +97,7 @@ class App extends React.Component<{},any>{
             </Main>
              
       <Footer>
-      <Text> © 2020 LesMurah.com by neodroid 🔥</Text>
+      <Text> © 2020LesMurah.com by neodroid 🔥</Text>
     </Footer>
    
         </Container>
