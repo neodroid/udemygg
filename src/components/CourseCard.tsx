@@ -140,9 +140,10 @@ export const CourseCard = (props) => {
         <Box     mt="1">
         <ChakraLink
       isExternal
-      href="https://wa.me/6285155337413?text=Halo%20min!%20Saya%20tertarik%20dengan%20Course%20Udemy%20yang%20dijual"
+      href="https://wa.me/6285776135535?text=Halo%20min!%20Saya%20tertarik%20dengan%20Course%20Udemy%20yang%20dijual"
       flexGrow={3}
       mx={2}
+          
     >
       <Button width="100%" variant="solid" variantColor="green">
         Beli
